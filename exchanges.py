@@ -14,9 +14,10 @@ def main():
                 all_exchanges.append([numb_one] + z)
         return all_exchanges
 #-----------------------------------------------------        
-    for i in exchanges([1, 2, 3]):
+    for i in exchanges([2, 3, 1]):
         print(i)
-        
+#-----------------------------------------------------          
 if __name__ == '__main__':
     main()
+
 
