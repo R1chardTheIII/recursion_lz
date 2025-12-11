@@ -1,23 +1,24 @@
 def main():
-    def exchanges(spis):
 #-----------------------------------------------------
-        if  len(spis) == 0:
-            return [[]]
-        all_exchanges = []
-#-----------------------------------------------------        
-        for i in range(len(spis)): 
-            numb_one = spis[i]
-            remaning = spis[:i] + spis[i + 1:]
-            exchanges_remain = exchanges(remaning)
-#-----------------------------------------------------           
-            for z in exchanges_remain:
-                all_exchanges.append([numb_one] + z)
-        return all_exchanges
-#-----------------------------------------------------        
-    for i in exchanges([2, 3, 1]):
-        print(i)
-#-----------------------------------------------------          
-if __name__ == '__main__':
-    main()
+ def perfection(z):
+    x = []
+    for i in range(1, z):
+     if z % i == 0:
+      x.append(i)
+     return x
+#-----------------------------------------------------
+ def summa(x, y):
+    if y == sum(x):
+        print("Число совершенное")
+    else:
+        print("Число несовершенное")
+ y = int(input("Введите число: "))
+ x = perfection(y)
+ print(x)
+ summa(x, y)
+#-----------------------------------------------------
+if __name__ == "__main__":       
+    main() 
+
 
 
